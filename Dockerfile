@@ -14,7 +14,8 @@ RUN pip install \
     jupyterlab_widgets \
     ipywidgets \
     jupyter-dash \
-    jupyterlab-cell-status-extension
+    jupyterlab-cell-status-extension \
+    jupyterlab-execute-time
 
 # install stable diffusion from source
 RUN pip install git+https://github.com/huggingface/diffusers.git@main
