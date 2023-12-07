@@ -5,10 +5,10 @@ services:
     build: .
     image: antonioanerao/jupyter-stable-diffusion:latest
     ports:
-      - 8888:8888
+      - ${JupyterPort}:${JupyterPort}
     volumes:
       - ./project:/project
-    command: jupyter lab --ip=0.0.0.0 --port=8888 --allow-root
+    command: jupyter lab --ip=0.0.0.0 --port=${JupyterPort} --allow-root --NotebookApp.token='${JupyterAppToken}'
     deploy:
       resources:
         reservations:
